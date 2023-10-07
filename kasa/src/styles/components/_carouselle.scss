@@ -1,0 +1,226 @@
+.cardDetails {
+    margin-top: 50px;
+  
+    &__carousel {
+      position: relative; // Important pour positionner absolument les vecteurs par rapport à ce conteneur.
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      overflow: hidden; // Masquer les éléments débordants si nécessaire.
+    }
+  
+    &__vectorl,
+    &__vectorr {
+      position: absolute;
+      top: 50%; // Centre verticalement.
+      transform: translateY(-50%); // Ajustement pour centrer parfaitement sur l'axe Y.
+      cursor: pointer; // Indique que c'est cliquable.
+      z-index: 2; // Assure que les vecteurs sont au-dessus de l'image.
+  
+    }
+  
+    &__vectorl {
+      left: 7%; // Position depuis le côté gauche.
+    }
+  
+    &__vectorr {
+      right: 7%; // Position depuis le côté droit.
+    }
+  
+    &__carouselImg {
+      width: 1240px;
+      height: 415px;
+      object-fit: cover; // Assure que l'image couvre la zone sans déformer les proportions.
+      object-position: center; // Centre l'image si elle est redimensionnée.
+      border-radius: 25px;
+    }
+
+/*     &__description{
+        
+    } */
+    &__infosCtner {
+        display: flex;
+        margin-left: 55px;
+        margin-right: 55px;
+        flex-direction: column;
+/*         background-color: yellow; */
+    }
+    &__hostTitle {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__host {
+        display: flex;
+    }
+    &__hostpic {
+        border-radius: 62px;
+    }
+    &__hostname {
+        color: #FF6060;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        width: 93px;
+        margin-right: 10px;
+    }
+    &__title{
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        margin-bottom: 0;
+    }
+    &__location {
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 25.668px */
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    
+/*       &__tags {
+        margin-bottom: 10px;
+      } */
+      &__tagStars {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 31px;
+    }
+    
+      &__tag {
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-right: 5px;
+        font-size: 14px;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 19.964px */
+        background: var(--Red, #FF6060);
+      }
+    &__Flexbox {
+        display: flex;
+        padding: 10px 20px 10px 10px;
+        border-radius: 10px;
+        background: var(--Red, #FF6060);
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 20px;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    
+      &__description {
+        /* margin-bottom: 15px; */
+        font-size: 16px;
+        /* color: #666; */
+        border-radius: 0px 0px 10px 10px;
+        background: var(--Gray, #F6F6F6);
+        color: #FF6060;
+        margin-top: -8px;
+        padding: 16px 10px 10px 10px;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+    line-height: 142.6%;
+    }
+    
+      &__equipmentsCtner {
+    
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            border-radius: 0px 0px 10px 10px;
+            background: var(--Gray, #F6F6F6);
+            color: #FF6060;
+            margin-top: -8px;
+            padding: 16px 10px 10px 10px;
+    
+          li {
+            margin-bottom: 5px;
+            font-size: 15px;
+          }
+        }
+      }
+    &__descriptionCtner {
+        width: 582px;
+/*         padding: 10px 20px 10px 10px; */
+    }
+    &__equipmentsCtner {
+        width: 582px;
+/*         padding: 10px 20px 10px 10px; */
+    }
+    }
+  .carDetails__infosCtner {
+    display: flex;
+    margin-left: 55px;
+    margin-right: 55px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.CardDetails__descripEquipeCtner {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+#margeTop{
+    margin-top: -6px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+}
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Ajoutez tout autre style spécifique pour votre SVG ici */
+  .chevron {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+  
+
+
+  
+    
+  

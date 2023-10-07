@@ -1,0 +1,36 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+// Variables
+@import './global/_variables.scss'; 
+
+/* @import 'reset';   */
+
+// Components
+@import 'components/button';
+@import 'components/_carouselle';
+
+// Layouts 
+@import 'layouts/_header.scss';
+@import 'layouts/_main.scss';
+@import 'layouts/_footer.scss';
+@import 'layouts/_mainApropos.scss';
+
+/* @import 'layouts/main';
+@import 'layouts/footer'; */
+
+// Pages
+/* @import 'pages/home'; /*  */
+@import 'pages/_about.scss'; 
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+  }
+a{
+  text-decoration:none;
+}
+#carDetails__descripEquipeCtner{
+  display:flex ;
+  flex-direction: row;
+}
+

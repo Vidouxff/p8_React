@@ -1,0 +1,107 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__card a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    
+    #banniere{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__imgBandeau {
+        border-radius: 25px;
+    }
+    #box{
+        margin-top: 43px;
+        width: 1240px;
+        height: 829px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__background {
+        width: 1240px;
+        background-color: #f6f6f6;
+        border-radius: 25px;
+    }
+
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 50px;
+        padding-top: 56px;
+        padding-left: 50px;
+        padding-bottom: 43px;
+    }
+      
+    &__card {
+        position: relative; 
+        width: 340px;
+        height: 340px; 
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+        overflow: hidden; 
+
+        &Img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        &Title {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 142.6%;
+        }
+    }
+
+/*     &__cardImg{
+        max-width: 340px;
+        max-height: 340px;
+        border-radius: 10px;
+    } */
+      
+    &__banner {
+
+        position: relative;
+      
+    }
+      
+    &__imgBandeau {
+        width: 1240px;
+        height: 223px; 
+        display: block;
+
+    }
+      
+    &__banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 68.448px;
+    }
+}
+
+.main__imgBandeau{
+    margin-left: auto;
+    margin-right: auto;
+}
