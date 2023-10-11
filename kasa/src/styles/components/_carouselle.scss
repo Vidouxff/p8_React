@@ -87,6 +87,8 @@
         line-height: 142.6%;
         width: 93px;
         margin-right: 10px;
+
+
     }
     &__title{
         color: #FF6060;
@@ -96,6 +98,10 @@
         font-weight: 500;
         line-height: 142.6%;
         margin-bottom: 0;
+
+        @media screen and (max-width: 950px){
+          font-size: 18px;
+      }
     }
     &__location {
         color: #FF6060;
@@ -106,6 +112,9 @@
         line-height: 142.6%; /* 25.668px */
         margin-top: 0;
         margin-bottom: 20px;
+        @media screen and (max-width: 950px){
+          font-size: 14px;
+      }
       }
     
 /*       &__tags {

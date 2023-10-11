@@ -100,6 +100,11 @@
   line-height: 142.6%;
   margin-bottom: 0;
 }
+@media screen and (max-width: 950px) {
+  .cardDetails__title {
+    font-size: 18px;
+  }
+}
 .cardDetails__location {
   color: #FF6060;
   font-family: Montserrat;
@@ -109,6 +114,11 @@
   line-height: 142.6%; /* 25.668px */
   margin-top: 0;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 950px) {
+  .cardDetails__location {
+    font-size: 14px;
+  }
 }
 .cardDetails__tagStars {
   display: flex;
