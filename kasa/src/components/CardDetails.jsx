@@ -4,6 +4,7 @@ import accommodations from "../data/accommodations.json";
 import RatingStars from './RatingStars';
 import ChevronIcon from './ChevronIcon';
 import '../styles/components/_carouselle.scss';
+/* import Footer from "./Footer"; */
 
 function CardDetails({ setIsCardDetailsVisible }) {
   // Vérifiez si setIsCardDetailsVisible est bien une fonction avant de l'utiliser dans useEffect.
@@ -50,6 +51,7 @@ function CardDetails({ setIsCardDetailsVisible }) {
   const formattedLocation = accommodation.location.replace(' - ', ', ');
 
   return (
+    <div>
       <main className="cardDetails">
         <div className="cardDetails__carousel">
           <svg
@@ -87,21 +89,22 @@ function CardDetails({ setIsCardDetailsVisible }) {
           </svg>
         </div>
       <div className="carDetails__infosCtner">
-        <div className="cardDetails__hostTitle">
-	    <h1 className="cardDetails__title">{accommodation.title}</h1>
-        <div className="cardDetails__host">
-        <h4 className="cardDetails__hostname">{accommodation.host.name}</h4>
-          <img className="cardDetails__hostpic" src={accommodation.host.picture} alt={accommodation.host.name} />
-        </div>
-        </div>
-        <p className="cardDetails__location">{formattedLocation}</p>
-        <div className="cardDetails__tagStars">
-        <div className="cardDetails__tags">
+        <div className="cardDetails__infosGauche">
+	        <h1 className="cardDetails__title">{accommodation.title}</h1>
+          <p className="cardDetails__location">{formattedLocation}</p>
+          <div className="cardDetails__tags">
           {accommodation.tags.map((tag, index) => (
             <span key={index} className="cardDetails__tag">{tag}</span>
           ))}
         </div>
-        <RatingStars rating={accommodation.rating} />
+        </div>
+        <div className="cardDetails__infosDroite">
+          <RatingStars rating={accommodation.rating} />
+          <div className="cardDetails__host">
+            <h4 className="cardDetails__hostname">{accommodation.host.name}</h4>
+            <img className="cardDetails__hostpic" src={accommodation.host.picture} alt={accommodation.host.name} />
+          </div>
+        </div>
         </div>
         <div className="CardDetails__descripEquipeCtner">
             <div className="cardDetails__descriptionCtner">
@@ -129,8 +132,9 @@ function CardDetails({ setIsCardDetailsVisible }) {
                 </ul>
             </div>
         </div>
-      </div>
       </main>
+{/*       <Footer isCardDetailsVisible={true} /> */}
+      </div>
   );
 }
 

@@ -65,7 +65,7 @@
         margin-left: 55px;
         margin-right: 55px;
         flex-direction: column;
-/*         background-color: yellow; */
+
     }
     &__hostTitle {
         display: flex;
@@ -73,9 +73,17 @@
     }
     &__host {
         display: flex;
+       @media screen and (max-width: 900px){
+        display: flex;
+        align-items: center;
+      }
     }
     &__hostpic {
         border-radius: 62px;
+        @media screen and (max-width: 900px){
+          width: 32px;
+          height: 32px;
+        }
     }
     &__hostname {
         color: #FF6060;
@@ -87,6 +95,11 @@
         line-height: 142.6%;
         width: 93px;
         margin-right: 10px;
+        @media screen and (max-width: 900px){
+          font-size: 12px;
+          width: 80px;
+          height: 33px;
+        }
 
 
     }
@@ -127,7 +140,13 @@
         justify-content: space-between;
         margin-bottom: 31px;
     }
-    
+    &__tags{
+/*       margin-bottom: 20px; */
+    @media screen and (max-width:374px) {
+      display: grid;
+      gap: 10px;
+    }
+    }
       &__tag {
         border-radius: 10px;
         padding: 5px 10px;
@@ -141,6 +160,10 @@
         font-weight: 500;
         line-height: 142.6%; /* 19.964px */
         background: var(--Red, #FF6060);
+        @media screen and (max-width: 374px){
+          font-size: 12px;
+          margin-right: 0;
+        }
       }
     &__Flexbox {
         display: flex;
@@ -157,7 +180,13 @@
         font-style: normal;
         font-weight: 500;
     }
-
+    &__infosDroite {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+      
+  }
     
       &__description {
         /* margin-bottom: 15px; */
@@ -209,11 +238,13 @@
     }
     }
 .carDetails__infosCtner {
-    display: flex;
-    margin-left: 55px;
-    margin-right: 55px;
-    flex-direction: column;
-    margin-top: 50px;
+  display: flex;
+  margin-left: 55px;
+  margin-right: 55px;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: space-between;
+  margin-bottom: 24px;
     @media screen and (max-width: 1300px){
       display: flex;
       margin-left: auto;
@@ -224,12 +255,14 @@
   }
 }
 .CardDetails__descripEquipeCtner {
-    display: flex;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
     @media screen and (max-width: 1300px){
       flex-direction: column;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
       }
 }
 #margeTop{
@@ -269,6 +302,12 @@
   }
   .footer.anotherMarginClass {
     margin-bottom: 50px;
+  }
+  .stars{
+    @media screen and (max-width: 900px){
+      width: 18px;
+      height: 18px;
+    }
   }
 
 

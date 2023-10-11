@@ -14,8 +14,8 @@ function RatingStars({ rating }) {
 
     return (
         <div className="ratingStars">
-            {[...filledStars, ...emptyStars].map((type, index) => (
-                <Star key={`star_${index}`} type={type} />
+            {  [...filledStars, ...emptyStars].map((type, index) => (
+                <Star className="stars" key={`star_${index}`} type={type} />
             ))}
         </div>
     );

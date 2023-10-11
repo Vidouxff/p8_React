@@ -25,7 +25,10 @@ function App() {
             <Route path="main" element={<Main/>}/>
             <Route path="*" element={<ErrorPage message="Page not found" />} />
           </Routes>
-          <Footer isAProposClicked={isAProposClicked} isCardDetails={currentComponent === "CardDetails"} />
+          <Footer 
+          isAProposClicked={isAProposClicked}
+          isCardDetailsVisible={currentComponent === "isCardDetailsVisible"} 
+          isErrorPage={currentComponent === "isErrorPage"}/>
         </div>
       </ErrorBoundary>
     </Router>
