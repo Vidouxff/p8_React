@@ -5,7 +5,7 @@ export default function Header({ setIsAProposClicked }) {
   return (
     <header className="header">
       <div className="header__logo">
-        <svg
+        <svg className="header__svg"
           width="211"
           height="68"
           viewBox="0 0 211 68"
@@ -36,13 +36,7 @@ export default function Header({ setIsAProposClicked }) {
       </div>
       <nav className="header__nav">
         <Link className="header__accueil" to="/" onClick={() => setIsAProposClicked(false)}>Accueil</Link>
-        <Link 
-          className="header__apropos" 
-          to="/a-propos"
-          onClick={() => setIsAProposClicked(true)}
-        >
-          A propos
-        </Link>
+        <Link className="header__apropos"  to="/a-propos" onClick={() => setIsAProposClicked(true)}> A propos </Link>
       </nav>
     </header>
   );

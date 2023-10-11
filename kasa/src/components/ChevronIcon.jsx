@@ -1,3 +1,4 @@
+import '../styles/styles.css';
 function ChevronIcon({ onClick, fill = "white", isRotated = false }) {
   return (
     <svg 

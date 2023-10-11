@@ -5,6 +5,10 @@
     height: 209px;
     margin-top: 2001px;
 
+    @media screen and (max-width: 860px){
+      margin-top: 5346px;
+    }
+
     &__ctner{
         display: flex;
         flex-direction: column;
@@ -27,10 +31,23 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%; /* 34.224px */
+        @media screen and (max-width: 860px){
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 142.6%;
+          width: 133.594px;
+          height: 46px;
+      }
     }
 
 }
 .footer.addedMargin {
     margin-top: 50px;
   }
-  
+.footer.anotherMarginClass {
+  margin-bottom: 50px;
+}
+  .errorPageMarginClass {
+    margin-top: 50px; 
+  }

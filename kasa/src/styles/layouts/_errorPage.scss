@@ -1,0 +1,72 @@
+.errorPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 288px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 142.6%;
+        color: #FF6060;
+        margin-top: 139px;
+        margin-bottom: 139px;
+
+    }
+    &__text{
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+    }
+    &__linkMenu{
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 25.668px */
+        text-decoration-line: underline;
+    }
+}
+
+/* Pour les tablettes et les écrans de taille moyenne */
+@media (max-width: 768px) {
+    .errorPage{
+        &__title {
+        font-size: 144px;
+        margin-top: 70px;
+        }
+        &__text {
+        font-size: 24px;
+        }
+        &__linkMenu {
+        font-size: 16px;
+        }
+    }
+}
+
+/* Pour les smartphones ou les écrans plus petits */
+@media (max-width: 480px) {
+
+    .errorPage{
+        
+
+    &__title {
+        font-size: 96px;
+        margin-top: 35px;
+    }
+    &__text {
+        font-size: 18px;
+    }
+    &__linkMenu {
+        font-size: 14px;
+    }
+}
+}
+  

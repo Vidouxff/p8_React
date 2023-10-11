@@ -1,15 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import accommodations from "../data/accommodations.json";
 import RatingStars from './RatingStars';
-import ChevronIcon from './ChevronIcon' ;
+import ChevronIcon from './ChevronIcon';
 import '../styles/components/_carouselle.scss';
 
-function CardDetails() {
+function CardDetails({ setIsCardDetailsVisible }) {
+  // Vérifiez si setIsCardDetailsVisible est bien une fonction avant de l'utiliser dans useEffect.
+  useEffect(() => {
+    if (typeof setIsCardDetailsVisible === 'function') {
+      setIsCardDetailsVisible(true);
+
+      // Cleanup : Reset la valeur quand le composant est démonté.
+      return () => {
+        setIsCardDetailsVisible(false);
+      };
+    }
+  }, [setIsCardDetailsVisible]);  // Ajoutez-le comme dépendance pour éviter les avertissements.
+
   const { id } = useParams();
   const accommodation = accommodations.find((acc) => acc.id === id);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isDescriptionVisible, setDescriptionVisibility] = useState(false);
+  const [isEquipmentVisible, setEquipmentVisibility] = useState(false);
+
+  if (!accommodation) {
+    return <div>Accommodation not found</div>;
+  }
+
+/*   const { id } = useParams();
+  const accommodation = accommodations.find((acc) => acc.id === id);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); */
 
   const goToNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % accommodation.pictures.length);
@@ -20,12 +43,9 @@ function CardDetails() {
       (prevIndex) => (prevIndex - 1 + accommodation.pictures.length) % accommodation.pictures.length
     );
   };
-  const [isDescriptionVisible, setDescriptionVisibility] = useState(false);
-  const [isEquipmentVisible, setEquipmentVisibility] = useState(false);
+/*   const [isDescriptionVisible, setDescriptionVisibility] = useState(false);
+  const [isEquipmentVisible, setEquipmentVisibility] = useState(false); */
 
-  if (!accommodation) {
-    return <div>Accommodation not found</div>;
-  }
 
   const formattedLocation = accommodation.location.replace(' - ', ', ');
 

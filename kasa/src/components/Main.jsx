@@ -8,7 +8,7 @@ export default function Main() {
     return (
         <div className="main">
             <section id="banniere" className="main__banner">
-                <img className="main__imgBandeau" src={Imgbandeau1} alt="bandeau" />
+                <img className="main__imgBandeau" id="iMgBando" src={Imgbandeau1} alt="bandeau" />
                 <div className="main__banner-text">
                     Chez vous, partout et ailleurs
                 </div>

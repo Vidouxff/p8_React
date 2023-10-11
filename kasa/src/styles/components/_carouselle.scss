@@ -2,13 +2,19 @@
     margin-top: 50px;
   
     &__carousel {
-      position: relative; // Important pour positionner absolument les vecteurs par rapport à ce conteneur.
+      position: relative; 
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       border-radius: 25px;
-      overflow: hidden; // Masquer les éléments débordants si nécessaire.
+      overflow: hidden; // Masquer les éléments débordants
+
+    @media screen and (max-width: 1300px){
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+  }
     }
   
     &__vectorl,
@@ -23,10 +29,20 @@
   
     &__vectorl {
       left: 7%; // Position depuis le côté gauche.
+
+      @media screen and (max-width: 600px){
+        width: 24px;
+        height: 24px;
+    }
     }
   
     &__vectorr {
       right: 7%; // Position depuis le côté droit.
+
+      @media screen and (max-width:  600px){
+        height: 24px;
+        width: 24px;
+    }
     }
   
     &__carouselImg {
@@ -35,6 +51,10 @@
       object-fit: cover; // Assure que l'image couvre la zone sans déformer les proportions.
       object-position: center; // Centre l'image si elle est redimensionnée.
       border-radius: 25px;
+
+      @media screen and (max-width: 1300px){
+        width: 100%;
+    }
     }
 
 /*     &__description{
@@ -167,25 +187,41 @@
       }
     &__descriptionCtner {
         width: 582px;
-/*         padding: 10px 20px 10px 10px; */
-    }
+        @media screen and (max-width: 1300px){
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
     &__equipmentsCtner {
         width: 582px;
-/*         padding: 10px 20px 10px 10px; */
+        @media screen and (max-width: 1300px){
+          width: 100%;
+        }
     }
     }
-  .carDetails__infosCtner {
+.carDetails__infosCtner {
     display: flex;
     margin-left: 55px;
     margin-right: 55px;
     flex-direction: column;
     margin-top: 50px;
+    @media screen and (max-width: 1300px){
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: column;
+      margin-top: 50px;
+      width: 95%;
+  }
 }
 .CardDetails__descripEquipeCtner {
     display: flex;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1300px){
+      flex-direction: column;
+      }
 }
 #margeTop{
     margin-top: -6px;
@@ -218,7 +254,13 @@
     width: 32px;
     height: 32px;
   }
-  
+
+  #Footer{
+    margin-top: 50px;
+  }
+  .footer.anotherMarginClass {
+    margin-bottom: 50px;
+  }
 
 
   

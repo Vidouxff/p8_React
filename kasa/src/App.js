@@ -6,9 +6,12 @@ import MainApropos from "./components/MainApropos.jsx";
 import Footer from "./components/Footer.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import CardDetails from "./components/CardDetails.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
+
 
 function App() {
   const [isAProposClicked, setIsAProposClicked] = useState(false);
+  const [currentComponent, setCurrentComponent] = useState("");
 
   return (
     <Router>
@@ -16,15 +19,18 @@ function App() {
         <div>
           <Header setIsAProposClicked={setIsAProposClicked} />
           <Routes>
-          <Route index element={<Main />} />
-          <Route path="a-propos" element={<MainApropos />} />
-          <Route path="card/:id" element={<CardDetails />} />
+            <Route index element={<Main />} />
+            <Route path="a-propos" element={<MainApropos />} />
+            <Route path="card/:id" element={<CardDetails setCurrentComponent={setCurrentComponent} />} />
+            <Route path="main" element={<Main/>}/>
+            <Route path="*" element={<ErrorPage message="Page not found" />} />
           </Routes>
-          <Footer isAProposClicked={isAProposClicked} />
+          <Footer isAProposClicked={isAProposClicked} isCardDetails={currentComponent === "CardDetails"} />
         </div>
       </ErrorBoundary>
     </Router>
   );
 }
+
 
 export default App;

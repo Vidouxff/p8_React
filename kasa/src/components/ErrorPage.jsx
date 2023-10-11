@@ -2,12 +2,17 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom'; // Si vous utilisez react-router
-
+import Header from './Header';
+import Footer from './Footer';
 const ErrorPage = ({ message }) => (
-  <div>
-    <h1>Oops, Something Went Wrong!</h1>
-    <p>{message || 'An unexpected error has occurred.'}</p>
-    <Link to="/">Return to Home</Link>
+  <div >
+        <Header/>
+    <div className='errorPage'>
+    <h1 className='errorPage__title' >400</h1>
+    <p className='errorPage__text'>{/* {message || ' */}Oups! La page que vous demandez n'existe pas.{/* } */}</p>
+    <Link className='errorPage__linkMenu' to="/">Retourner sur la page d’accueil</Link>
+  </div>
+  <Footer isErrorPage={true} />
   </div>
 );
 
