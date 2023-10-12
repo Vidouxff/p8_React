@@ -315,7 +315,12 @@
 }
 
 .footer.anotherMarginClass {
-  margin-bottom: 50px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 900px) {
+  .footer.anotherMarginClass {
+    margin-top: 27px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -700,10 +705,6 @@
 
 .footer.addedMargin {
   margin-top: 50px;
-}
-
-.footer.anotherMarginClass {
-  margin-bottom: 50px;
 }
 
 .errorPageMarginClass {

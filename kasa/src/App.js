@@ -11,7 +11,9 @@ import ErrorPage from "./components/ErrorPage.jsx";
 
 function App() {
   const [isAProposClicked, setIsAProposClicked] = useState(false);
-  const [currentComponent, setCurrentComponent] = useState("");
+  const [currentComponent] = useState("false");
+  const [isCardDetailsVisible, setIsCardDetailsVisible] = useState(false);
+
 
   return (
     <Router>
@@ -21,14 +23,16 @@ function App() {
           <Routes>
             <Route index element={<Main />} />
             <Route path="a-propos" element={<MainApropos />} />
-            <Route path="card/:id" element={<CardDetails setCurrentComponent={setCurrentComponent} />} />
+            <Route path="card/:id" element={<CardDetails setIsCardDetailsVisible={setIsCardDetailsVisible} />} />
+
             <Route path="main" element={<Main/>}/>
             <Route path="*" element={<ErrorPage message="Page not found" />} />
           </Routes>
           <Footer 
-          isAProposClicked={isAProposClicked}
-          isCardDetailsVisible={currentComponent === "isCardDetailsVisible"} 
-          isErrorPage={currentComponent === "isErrorPage"}/>
+            isAProposClicked={isAProposClicked}
+            isCardDetailsVisible={isCardDetailsVisible}
+            isErrorPage={currentComponent === "isErrorPage"}
+/>
         </div>
       </ErrorBoundary>
     </Router>

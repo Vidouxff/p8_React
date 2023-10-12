@@ -4,21 +4,16 @@ import accommodations from "../data/accommodations.json";
 import RatingStars from './RatingStars';
 import ChevronIcon from './ChevronIcon';
 import '../styles/components/_carouselle.scss';
-/* import Footer from "./Footer"; */
+
 
 function CardDetails({ setIsCardDetailsVisible }) {
-  // Vérifiez si setIsCardDetailsVisible est bien une fonction avant de l'utiliser dans useEffect.
   useEffect(() => {
-    if (typeof setIsCardDetailsVisible === 'function') {
-      setIsCardDetailsVisible(true);
-
-      // Cleanup : Reset la valeur quand le composant est démonté 
-      return () => {
-        setIsCardDetailsVisible(false);
-      };
-    }
-  }, [setIsCardDetailsVisible]);  // Ajoutez-le comme dépendance pour éviter les avertissements.
-
+    setIsCardDetailsVisible(true);
+    return () => {
+      setIsCardDetailsVisible(false);
+    };
+  }, [setIsCardDetailsVisible]);
+  
   const { id } = useParams();
   const accommodation = accommodations.find((acc) => acc.id === id);
 
@@ -133,7 +128,7 @@ function CardDetails({ setIsCardDetailsVisible }) {
             </div>
         </div>
       </main>
-{/*       <Footer isCardDetailsVisible={true} /> */}
+
       </div>
   );
 }

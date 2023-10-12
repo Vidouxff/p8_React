@@ -301,7 +301,10 @@
     margin-top: 50px;
   }
   .footer.anotherMarginClass {
-    margin-bottom: 50px;
+    margin-top: 50px;
+    @media screen and (max-width: 900px){
+      margin-top: 27px;
+    } 
   }
   .stars{
     @media screen and (max-width: 900px){

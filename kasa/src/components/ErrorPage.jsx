@@ -1,7 +1,7 @@
 // ErrorPage.jsx
 
 import React from 'react';
-import { Link } from 'react-router-dom'; // Si vous utilisez react-router
+import { Link } from 'react-router-dom'; 
 import Header from './Header';
 import Footer from './Footer';
 const ErrorPage = ({ message }) => (

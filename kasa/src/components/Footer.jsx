@@ -1,7 +1,8 @@
 import React from 'react';
-import Logo from '../images/logos/LOGO2.png'; 
+import Logo from '../images/logos/LOGO2.png';
+ 
 
-function Footer({ isAProposClicked, isCardDetailsVisible, isErrorPage }) {
+function Footer({ isAProposClicked, isErrorPage,isCardDetailsVisible }) {
     return (
       <footer className={`footer 
                         ${isAProposClicked ? "addedMargin" : ""} 
