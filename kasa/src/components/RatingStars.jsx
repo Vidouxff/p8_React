@@ -21,14 +21,13 @@ function RatingStars({ rating }) {
     );
 }
 
-// Assurez-vous que ce composant est dans le même fichier que RatingStars ou importez-le si nécessaire
 function Star({ type }) {
     const fillColor = type === "filled" ? "#FF6060" : "#E3E3E3";
 
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="36" // La syntaxe correcte est sans les guillemets ici
+            width="36" 
             height="36" 
             fill={fillColor}
         >

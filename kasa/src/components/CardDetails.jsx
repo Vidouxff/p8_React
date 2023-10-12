@@ -12,7 +12,7 @@ function CardDetails({ setIsCardDetailsVisible }) {
     if (typeof setIsCardDetailsVisible === 'function') {
       setIsCardDetailsVisible(true);
 
-      // Cleanup : Reset la valeur quand le composant est démonté.
+      // Cleanup : Reset la valeur quand le composant est démonté 
       return () => {
         setIsCardDetailsVisible(false);
       };

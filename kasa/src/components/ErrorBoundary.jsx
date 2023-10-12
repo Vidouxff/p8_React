@@ -14,7 +14,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Vous pouvez aussi logguer l'erreur dans un service de rapport d'erreurs
+    
     console.error("Uncaught error:", error, errorInfo);
   }
 
