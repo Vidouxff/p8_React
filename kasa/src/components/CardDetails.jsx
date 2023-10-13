@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import accommodations from "../data/accommodations.json";
 import RatingStars from './RatingStars';
 import ChevronIcon from './ChevronIcon';
 import '../styles/components/_carouselle.scss';
+
 
 
 function CardDetails({ setIsCardDetailsVisible }) {
@@ -22,8 +24,8 @@ function CardDetails({ setIsCardDetailsVisible }) {
   const [isEquipmentVisible, setEquipmentVisibility] = useState(false);
 
   if (!accommodation) {
-    return <div>Accommodation not found</div>;
-  }
+    return <Navigate to="/404" replace />;
+}
 
 /*   const { id } = useParams();
   const accommodation = accommodations.find((acc) => acc.id === id);

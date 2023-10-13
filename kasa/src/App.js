@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Main from "./components/Main.jsx";
@@ -11,8 +12,8 @@ import ErrorPage from "./components/ErrorPage.jsx";
 
 function App() {
   const [isAProposClicked, setIsAProposClicked] = useState(false);
-  const [currentComponent] = useState("false");
   const [isCardDetailsVisible, setIsCardDetailsVisible] = useState(false);
+  const [isErrorPageVisible, setIsErrorPageVisible] = useState(false);
 
 
   return (
@@ -26,13 +27,19 @@ function App() {
             <Route path="card/:id" element={<CardDetails setIsCardDetailsVisible={setIsCardDetailsVisible} />} />
 
             <Route path="main" element={<Main/>}/>
-            <Route path="*" element={<ErrorPage message="Page not found" />} />
+            <Route path="*" element={<ErrorPage 
+                           setIsErrorPageVisible={setIsErrorPageVisible}
+                           setIsCardDetailsVisible={setIsCardDetailsVisible} 
+                         />} />
+            <Route path="404" element={<ErrorPage message="Oups! La page que vous demandez n'existe pas." errorCode="404" />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+
           </Routes>
           <Footer 
             isAProposClicked={isAProposClicked}
             isCardDetailsVisible={isCardDetailsVisible}
-            isErrorPage={currentComponent === "isErrorPage"}
-/>
+            isErrorPageVisible={isErrorPageVisible}
+          />
         </div>
       </ErrorBoundary>
     </Router>
