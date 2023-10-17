@@ -10,6 +10,8 @@ import CardDetails from "./components/CardDetails.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 
 
+
+
 function App() {
   const [isAProposClicked, setIsAProposClicked] = useState(false);
   const [isCardDetailsVisible, setIsCardDetailsVisible] = useState(false);

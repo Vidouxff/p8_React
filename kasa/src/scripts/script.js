@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     var svgs = document.querySelectorAll('[id^="logoSVGmenuDrlent"]');
 
     svgs.forEach(function(svg, index) {
@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (text.classList.contains('open')) {
                 text.classList.remove('open');
-                svg.classList.remove('rotated'); /* enlever la classe rotated */
+                svg.classList.remove('rotated'); 
             } else {
                 text.classList.add('open');
-                svg.classList.add('rotated'); /* ajouter la classe rotated */
+                svg.classList.add('rotated'); 
             }
         });
     });
 });
+ */
+

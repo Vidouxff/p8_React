@@ -5,6 +5,7 @@ import accommodations from "../data/accommodations.json";
 import RatingStars from './RatingStars';
 import ChevronIcon from './ChevronIcon';
 import '../styles/components/_carouselle.scss';
+import Slideshow from "./Slideshow";
 
 
 
@@ -27,10 +28,6 @@ function CardDetails({ setIsCardDetailsVisible }) {
     return <Navigate to="/404" replace />;
 }
 
-/*   const { id } = useParams();
-  const accommodation = accommodations.find((acc) => acc.id === id);
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); */
 
   const goToNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % accommodation.pictures.length);
@@ -41,16 +38,13 @@ function CardDetails({ setIsCardDetailsVisible }) {
       (prevIndex) => (prevIndex - 1 + accommodation.pictures.length) % accommodation.pictures.length
     );
   };
-/*   const [isDescriptionVisible, setDescriptionVisibility] = useState(false);
-  const [isEquipmentVisible, setEquipmentVisibility] = useState(false); */
-
 
   const formattedLocation = accommodation.location.replace(' - ', ', ');
 
   return (
     <div>
       <main className="cardDetails">
-        <div className="cardDetails__carousel">
+{/*         <div className="cardDetails__carousel">
           <svg
             className="cardDetails__vectorl"
             width="48"
@@ -84,7 +78,13 @@ function CardDetails({ setIsCardDetailsVisible }) {
               fill="white"
             />
           </svg>
-        </div>
+        </div> */}
+        <Slideshow
+          images={accommodation.pictures}
+          currentImageIndex={currentImageIndex}
+          goToPrevImage={goToPrevImage}
+          goToNextImage={goToNextImage}
+        />
       <div className="carDetails__infosCtner">
         <div className="cardDetails__infosGauche">
 	        <h1 className="cardDetails__title">{accommodation.title}</h1>
